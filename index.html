@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="منصة الخديوى - الموقع الرسمي للأستاذ خالد مطر - معلم التاريخ">
+  <meta name="theme-color" content="#0a2538">
+  <title>منصة الخديوى | خالد مطر – أستاذ التاريخ</title>
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="main-header">
+  <div class="header-container">
+    <div class="logo-section">
+      <a href="#" class="logo" onclick="showHomePage(); return false;">
+        <i class="fas fa-landmark"></i>
+        <span>منصة الخديوى</span>
+      </a>
+      <span class="logo-subtitle">خالد مطر</span>
+    </div>
+    
+    <nav class="main-nav" id="mainNav">
+      <a href="#" onclick="showHomePage(); return false;" class="nav-link active">
+        <i class="fas fa-home"></i> الرئيسية
+      </a>
+      <a href="#" onclick="showVideosPage(); return false;" class="nav-link">
+        <i class="fas fa-video"></i> الفيديوهات
+      </a>
+    </nav>
+    
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Sidebar -->
+<div class="mobile-sidebar" id="mobileSidebar">
+  <div class="sidebar-header">
+    <h3>القائمة</h3>
+    <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="#" onclick="showHomePage(); closeMobileMenu(); return false;"><i class="fas fa-home"></i> الرئيسية</a>
+    <a href="#" onclick="showVideosPage(); closeMobileMenu(); return false;"><i class="fas fa-video"></i> الفيديوهات</a>
+  </nav>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Hero Section -->
+<section class="hero-section" id="homeSection">
+  <div class="hero-background">
+    <div class="hero-pattern"></div>
+    <div class="hero-gradient"></div>
+  </div>
+  
+  <div class="hero-container">
+    <div class="hero-image">
+      <div class="image-frame">
+        <!-- ضع مسار صورة الأستاذ خالد مطر هنا -->
+        <img src="images/teacher.jpg" alt="الأستاذ خالد مطر" class="teacher-photo" id="teacherPhoto">
+        <div class="image-decoration"></div>
+      </div>
+      <div class="experience-badge">
+        <span class="badge-number">7+</span>
+        <span class="badge-text">سنوات خبرة</span>
+      </div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i>
+        <span>رائد التعليم التاريخي</span>
+      </div>
+      <h1 class="hero-title">
+        الأستاذ
+        <span class="highlight">خالد مطر</span>
+      </h1>
+      <h2 class="hero-subtitle">منصة الخديوى لتعليم التاريخ</h2>
+      <p class="hero-description">
+        <i class="fas fa-quote-right"></i>
+        نقدم رحلة ممتعة عبر التاريخ المصري والعالمي، بأسلوب مبسط وشيق يضمن للطالب الفهم العميق والتميز الدراسي.
+      </p>
+      
+      <div class="hero-actions">
+        <a href="#" onclick="showVideosPage(); return false;" class="btn btn-primary btn-lg">
+          <i class="fas fa-play"></i>
+          شاهد الدروس
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,64 C480,160 960,0 1440,64 L1440,120 L0,120 Z" fill="#ffffff"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">لماذا منصة الخديوى؟</h2>
+      <p class="section-subtitle">مميزات تجعلنا الخيار الأول لطلاب التاريخ</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>خبرة عريقة</h3>
+        <p>أكثر من 7 أعوام من الخبرة في تدريس التاريخ للمرحلة الثانوية</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-landmark"></i></div>
+        <h3>منهج متكامل</h3>
+        <p>شروحات مبسطة وخرائط ذهنية لجميع فروع التاريخ</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-video"></i></div>
+        <h3>دروس مرئية</h3>
+        <p>فيديوهات شرح عالية الجودة للصفوف الثانوية الثلاثة</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <h3>دعم مستمر</h3>
+        <p>فريق دعم فني وتعليمي متاح للإجابة على جميع الاستفسارات</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Choices -->
+<main class="main-content">
+  <div class="container">
+    <div class="choices-section">
+      <a href="#" onclick="showVideosPage(); return false;" class="choice-card">
+        <div class="card-image-wrapper">
+          <!-- ضع مسار صورة فيديوهات الشرح هنا -->
+          <img src="images/videos-card.jpg" alt="فيديوهات الشرح" class="card-image" id="videosCardImage">
+          <div class="card-overlay"><i class="fas fa-arrow-left"></i></div>
+        </div>
+        <div class="card-content">
+          <h2><i class="fas fa-play-circle"></i> فيديوهات الشرح</h2>
+          <p>دروس مصوّرة للمرحلة الثانوية - أولى ثانوي - ثانية ثانوي - ثالثة ثانوي</p>
+          <span class="card-tag">جديد</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- Videos Page -->
+<section class="page-section" id="videos-page" hidden>
+  <div class="page-container">
+    <div class="page-header">
+      <button class="back-button" onclick="showHomePage()"><i class="fas fa-arrow-right"></i> العودة للرئيسية</button>
+      <h1 class="page-title"><i class="fas fa-video"></i> فيديوهات الشرح</h1>
+      <p class="page-description">اختر الصف الدراسي لمشاهدة الدروس المتاحة</p>
+    </div>
+    
+    <div class="stage-selector" id="stageSelector">
+      <button class="stage-btn" data-stage="first" onclick="showVideosStage('first')">
+        <i class="fas fa-graduation-cap"></i>
+        <span>الصف الأول الثانوي</span>
+      </button>
+      <button class="stage-btn" data-stage="second" onclick="showVideosStage('second')">
+        <i class="fas fa-graduation-cap"></i>
+        <span>الصف الثاني الثانوي</span>
+      </button>
+      <button class="stage-btn" data-stage="third" onclick="showVideosStage('third')">
+        <i class="fas fa-graduation-cap"></i>
+        <span>الصف الثالث الثانوي</span>
+      </button>
+    </div>
+    
+    <!-- إدارة الفيديوهات - يمكنك إضافة الفيديوهات من خلال ملف JavaScript -->
+    <div id="videosContent" style="margin-top: 2rem;"></div>
+  </div>
+</section>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closeVideoModal()"><i class="fas fa-times"></i></button>
+    <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <div class="footer-logo"><i class="fas fa-landmark"></i><span>منصة الخديوى</span></div>
+      <p class="footer-description">الموقع الرسمي للأستاذ خالد مطر - معلم التاريخ<br>نقدم أفضل محتوى تعليمي لطلاب التاريخ في المرحلة الثانوية</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/201144112839"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 منصة الخديوى - جميع الحقوق محفوظة</p></div>
+</footer>
+
+<button class="scroll-top" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,71 +1,5 @@
-// ============================================
-// دمج الفيديوهات المضافة من لوحة التحكم (admin.html)
-// ============================================
-
-// دالة لتحميل الفيديوهات من localStorage (التي أضافها الأدمن)
-function loadAdminVideos() {
-  const stored = localStorage.getItem('khedaweya_videos_list');
-  if (stored) {
-    try {
-      const adminVideos = JSON.parse(stored);
-      if (adminVideos && adminVideos.length > 0) {
-        // تصفيف الفيديوهات حسب المرحلة
-        window.adminFirstYearVideos = adminVideos.filter(v => v.stage === 'first');
-        window.adminSecondYearVideos = adminVideos.filter(v => v.stage === 'second');
-        window.adminThirdYearVideos = adminVideos.filter(v => v.stage === 'third');
-        
-        // دمج مع المصفوفات الموجودة (إذا أردت الاحتفاظ بالفيديوهات الافتراضية)
-        // يمكنك اختيار إما استبدالها أو دمجها
-        
-        // الخيار 1: استبدال المصفوفات بالفيديوهات من الأدمن (الأفضل)
-        if (window.firstYearVideos !== undefined) {
-          // استبدال محتويات المصفوفات الموجودة
-          window.firstYearVideos.length = 0;
-          window.secondYearVideos.length = 0;
-          window.thirdYearVideos.length = 0;
-          
-          window.firstYearVideos.push(...window.adminFirstYearVideos);
-          window.secondYearVideos.push(...window.adminSecondYearVideos);
-          window.thirdYearVideos.push(...window.adminThirdYearVideos);
-        }
-        
-        console.log('تم تحميل فيديوهات من لوحة التحكم:', adminVideos.length);
-      }
-    } catch(e) { console.error('خطأ في تحميل فيديوهات الأدمن', e); }
-  }
-}
-
-// استدعاء الدالة فوراً
-loadAdminVideos();
-
-// إضافة مستمع لتحديث الفيديوهات عند تغييرها من admin.html
-window.addEventListener('storage', function(e) {
-  if (e.key === 'khedaweya_videos_list') {
-    console.log('تم اكتشاف تغيير في الفيديوهات، يتم التحديث...');
-    loadAdminVideos();
-    // إذا كانت صفحة الفيديوهات مفتوحة، قم بتحديث العرض
-    if (document.getElementById('videos-page') && !document.getElementById('videos-page').hidden) {
-      const currentStage = window.currentStage || 'first';
-      if (typeof displayVideos === 'function') {
-        displayVideos(currentStage);
-      }
-    }
-  }
-});
-// ============================================
-// منصة الخديوى - الأستاذ خالد مطر
-// ملف إدارة الفيديوهات - يمكنك إضافة فيديوهاتك هنا
-// ============================================
-
-// ============================================
-// قسم إدارة الفيديوهات
-// أضف فيديوهاتك هنا في المصفوفات التالية
-// ============================================
-
 // فيديوهات الصف الأول الثانوي
-// يمكنك إضافة فيديوهات جديدة باستخدام الدالة addVideo أو عن طريق إضافتها مباشرة في المصفوفة
 const firstYearVideos = [
-  // مثال على إضافة فيديو جديد:
   // {
   //   title: "عنوان الفيديو",
   //   duration: "مدة الفيديو (مثلاً: 35 دقيقة)",
@@ -73,21 +7,28 @@ const firstYearVideos = [
   //   thumbnail: "رابط صورة الغلاف (اختياري)",
   //   description: "وصف مختصر للفيديو"
   // }
-  
-  // يمكنك إضافة فيديوهات الصف الأول الثانوي هنا
-  // اتركه فارغاً الآن لتضيف فيديوهاتك بنفسك
 ];
 
 // فيديوهات الصف الثاني الثانوي
 const secondYearVideos = [
-  // يمكنك إضافة فيديوهات الصف الثاني الثانوي هنا
-  // اتركه فارغاً الآن لتضيف فيديوهاتك بنفسك
+     {
+     title: "عنوان الفيديو",
+     duration: "30:05",
+     videoUrl: "اللنك",
+     thumbnail: "صوره.png",
+     description: "الوصف"
+  }
+
+
+  
 ];
 
 // فيديوهات الصف الثالث الثانوي
 const thirdYearVideos = [
-  // يمكنك إضافة فيديوهات الصف الثالث الثانوي هنا
-  // اتركه فارغاً الآن لتضيف فيديوهاتك بنفسك
+
+
+
+  
 ];
 
 // ============================================

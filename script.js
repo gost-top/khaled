@@ -14,10 +14,16 @@ const secondYearVideos = [
      {
      title: "عنوان الفيديو",
      duration: "30:05",
-     videoUrl: "https://www.youtube.com/watch?v=P3VBFg6kclE",
+     videoUrl: "(https://www.youtube.com/watch?v=P3VBFg6kclE)",
      thumbnail: "صوره.png",
-     description: "الوصف",
+     description: "الوصف"
   }
+  title: "عنوان الفيديو",
+     duration: "30:05",
+     videoUrl: "https://drive.google.com/file/d/1Eucrvs-yefsldNsik758FhIt3WduEerE/view?usp=sharing",
+     thumbnail: "صوره.png",
+     description: "الوصف"
+}
 
 
   

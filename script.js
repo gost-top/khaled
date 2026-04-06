@@ -18,15 +18,6 @@ const secondYearVideos = [
      thumbnail: "صوره.png",
      description: "الوصف"
   }
-  title: "عنوان الفيديو",
-     duration: "30:05",
-     videoUrl: "https://drive.google.com/file/d/1Eucrvs-yefsldNsik758FhIt3WduEerE/view?usp=sharing",
-     thumbnail: "صوره.png",
-     description: "الوصف"
-}
-
-
-  
 ];
 
 // فيديوهات الصف الثالث الثانوي
